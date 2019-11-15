@@ -1,0 +1,17 @@
+{
+	"name": "jest-nock-memory-leak",
+	"description": "Minimal test case for memory leaks in jest when using nock",
+	"scripts": {
+		"test": "node --trace-warnings --expose-gc node_modules/.bin/jest --logHeapUsage",
+		"test:no-nock": "WITHOUT_NOCK=true node --trace-warnings --expose-gc node_modules/.bin/jest --logHeapUsage"
+	},
+	"dependencies": {
+		"node-fetch": "^2.6.0"
+	},
+	"devDependencies": {
+		"@types/jest": "^24.0.23",
+		"@types/nock": "^11.1.0",
+		"jest": "^24.9.0",
+		"nock": "^11.7.0"
+	}
+}
